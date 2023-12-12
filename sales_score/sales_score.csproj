@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{88F3E987-32D7-4EBF-A41F-A1C1A34A5182}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>sales_score</RootNamespace>
+    <AssemblyName>sales_score</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.Schedule, Version=14.1.0.37, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.TreeGX, Version=14.1.0.37, Culture=neutral, PublicKeyToken=055db68f670cfeab, processorArchitecture=MSIL" />
+    <Reference Include="MD.PersianDateTime, Version=4.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MD.PersianDateTime.4.5.0\lib\net20\MD.PersianDateTime.dll</HintPath>
+    </Reference>
+    <Reference Include="MD.PersianDateTime.Standard, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MD.PersianDateTime.Standard.2.5.0\lib\netstandard2.0\MD.PersianDateTime.Standard.dll</HintPath>
+    </Reference>
+    <Reference Include="PersianDate, Version=3.5.6587.38230, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PersianDate.3.5.5\lib\net35\PersianDate.dll</HintPath>
+    </Reference>
+    <Reference Include="PersianDateTime, Version=1.1.5082.36395, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PersianDateTime.1.1.5082.36395\lib\net40\PersianDateTime.dll</HintPath>
+    </Reference>
+    <Reference Include="PersianDateTime.Core, Version=2.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PersianDateTime.Core.2.0.5\lib\netstandard2.0\PersianDateTime.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="categoryAttribute.cs" />
+    <Compile Include="Edite_kala_Namayandegi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edite_kala_Namayandegi.Designer.cs">
+      <DependentUpon>Edite_kala_Namayandegi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_Kala_Modir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Kala_Modir.Designer.cs">
+      <DependentUpon>Edit_Kala_Modir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs" />
+    <Compile Include="RJTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sabt_Foroush.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sabt_Foroush.Designer.cs">
+      <DependentUpon>Sabt_Foroush.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sabt_Kala_modir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sabt_Kala_modir.Designer.cs">
+      <DependentUpon>Sabt_Kala_modir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panel_Modiriyat_kala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Panel_Modiriyat_kala.Designer.cs">
+      <DependentUpon>Panel_Modiriyat_kala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panel_foroush.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Panel_foroush.Designer.cs">
+      <DependentUpon>Panel_foroush.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sabt_Kala_Namayandegi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sabt_Kala_Namayandegi.Designer.cs">
+      <DependentUpon>Sabt_Kala_Namayandegi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="panel_Namayandegi_Kala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="panel_Namayandegi_Kala.Designer.cs">
+      <DependentUpon>panel_Namayandegi_Kala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sabt_namayandegi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sabt_namayandegi.Designer.cs">
+      <DependentUpon>sabt_namayandegi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main_form.Designer.cs">
+      <DependentUpon>main_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RJButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="sabt_moshtari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sabt_moshtari.Designer.cs">
+      <DependentUpon>sabt_moshtari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="namayandegi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="namayandegi.Designer.cs">
+      <DependentUpon>namayandegi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelShadow.cs" />
+    <Compile Include="Form_inventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_inventory.Designer.cs">
+      <DependentUpon>Form_inventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="panel_Act_moshtari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="panel_Act_moshtari.Designer.cs">
+      <DependentUpon>panel_Act_moshtari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ranking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ranking.Designer.cs">
+      <DependentUpon>Ranking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="setting.Designer.cs">
+      <DependentUpon>setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="student.cs" />
+    <EmbeddedResource Include="Edite_kala_Namayandegi.resx">
+      <DependentUpon>Edite_kala_Namayandegi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_Kala_Modir.resx">
+      <DependentUpon>Edit_Kala_Modir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sabt_Foroush.resx">
+      <DependentUpon>Sabt_Foroush.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sabt_Kala_modir.resx">
+      <DependentUpon>Sabt_Kala_modir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel_Modiriyat_kala.resx">
+      <DependentUpon>Panel_Modiriyat_kala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel_foroush.resx">
+      <DependentUpon>Panel_foroush.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sabt_Kala_Namayandegi.resx">
+      <DependentUpon>Sabt_Kala_Namayandegi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="panel_Namayandegi_Kala.resx">
+      <DependentUpon>panel_Namayandegi_Kala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sabt_namayandegi.resx">
+      <DependentUpon>sabt_namayandegi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main_form.resx">
+      <DependentUpon>main_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sabt_moshtari.resx">
+      <DependentUpon>sabt_moshtari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="namayandegi.resx">
+      <DependentUpon>namayandegi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_inventory.resx">
+      <DependentUpon>Form_inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="panel_Act_moshtari.resx">
+      <DependentUpon>panel_Act_moshtari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ranking.resx">
+      <DependentUpon>Ranking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="setting.resx">
+      <DependentUpon>setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2023-08-01_104444.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2023-08-01_120302.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2023-08-01_120533.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2023-08-01_120620.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2023-08-01_120809.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-product-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-customer-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2620513_employee_job_level_seeker_unemployee_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-discount-finder-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-award-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sms-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sms-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2023-08-01_110801.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2023-08-19_153326.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cause-of-Sony-TV-turning-on-and-off.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2023-08-20_133258.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\66666.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hospital-4-xxl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hospital-4-xxl1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hospital-4-xxl2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\777.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\777 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\PersianDatePicker.css" />
+    <Content Include="Content\PersianDatePicker.min.css" />
+    <None Include="Resources\Picture1.png" />
+    <None Include="Resources\Picture3.png" />
+    <None Include="Resources\Picture2.png" />
+    <None Include="Resources\download.png" />
+    <None Include="Resources\2023-10-31_164209.png" />
+    <None Include="Resources\images.png" />
+    <None Include="Resources\0002.png" />
+    <None Include="Resources\document_add_256_icon-icons.com_75994.png" />
+    <None Include="Resources\0001.png" />
+    <None Include="Resources\41-410132_icon-for-save-button.png" />
+    <None Include="Resources\Picture207.png" />
+    <None Include="Resources\Picture28.png" />
+    <None Include="Resources\Picture29.png" />
+    <None Include="Resources\Picture30.png" />
+    <None Include="Resources\00000.png" />
+    <None Include="Resources\Picture31.png" />
+    <None Include="Resources\0005.png" />
+    <None Include="Resources\8488b718.png" />
+    <None Include="Resources\login.png" />
+    <None Include="Resources\login2.png" />
+    <None Include="Resources\Login3.png" />
+    <None Include="Resources\Login4.png" />
+    <Content Include="Scripts\PersianDatePicker.js" />
+    <Content Include="Scripts\PersianDatePicker.min.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
